@@ -8,8 +8,24 @@
 </head>
 <body>
 <nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-    </ul>
+    <header>
+        <div class="logo">
+          <div class="imagelogo">
+            <a href="index.html"><img src="https://picsum.photos/100/150" alt="logo"></a>
+          </div>
+          <a href="index.html"><h1>Site E-Commerce</h1></a>
+        </div>
+        <div class="utilisateur">
+          <div class="compteutilisateur">
+            <a href="/connexion">Connexion</a>
+          </div>
+          <div class="compteutilisateur">
+            <a href="/inscription">Inscription</a>
+          </div>
+        </div>
+    </header>
+    
+    <a href="/">Accueil</a>
+    <a href="/catalogue">Catalogue</a>
+    
 </nav>

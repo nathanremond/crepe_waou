@@ -8,10 +8,22 @@ class MainController
         $this->render('home');
     }
 
-    // Page "About"
-    public function about()
+    // Page "Catalogue"
+    public function catalogue()
     {
-        $this->render('about');
+        $this->render('catalogue');
+    }
+
+    // Page "Connexion"
+    public function connexion()
+    {
+        $this->render('connexion');
+    }
+
+    // Page "Inscription"
+    public function inscription()
+    {
+        $this->render('inscription');
     }
 
     // Page 404

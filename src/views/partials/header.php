@@ -11,9 +11,9 @@
     <header>
         <div class="logo">
           <div class="imagelogo">
-            <a href="index.html"><img src="https://picsum.photos/100/150" alt="logo"></a>
+            <a href="/"><img src="https://picsum.photos/100/150" alt="logo"></a>
           </div>
-          <a href="index.html"><h1>Site E-Commerce</h1></a>
+          <a href="/"><h1>Site E-Commerce</h1></a>
         </div>
         <div class="utilisateur">
           <div class="compteutilisateur">

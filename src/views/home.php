@@ -6,7 +6,11 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Welcome to the Home Page!</h1>
-    <a href="./about">About Us</a>
+    <div class="apropos">
+        <h2>A propos de nous</h2>
+        <div class="texteapropos">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae soluta, fugit modi porro quos voluptates iste numquam quia debitis. Deserunt rem quos vel reiciendis mollitia, accusantium voluptatibus assumenda nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae soluta, fugit modi porro quos voluptates iste numquam quia debitis. Deserunt rem quos vel reiciendis mollitia, accusantium voluptatibus assumenda nam.</p>
+        </div>
+    </div>
 </body>
 </html>

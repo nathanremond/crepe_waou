@@ -13,6 +13,7 @@ $router->map('GET', '/', 'MainController#home', 'home');
 $router->map('GET', '/catalogue', 'MainController#catalogue', 'catalogue');
 $router->map('GET', '/connexion', 'MainController#connexion', 'connexion');
 $router->map('GET', '/inscription', 'MainController#inscription', 'inscription');
+$router->map('GET', '/detail', 'MainController#detail', 'detail');
 
 // Retourne l'objet router
 return $router;

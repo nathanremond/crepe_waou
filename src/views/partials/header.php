@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/crepe_waou/public/styles.css">
 </head>
 <body>
-<nav>
     <header>
         <div class="logo">
           <div class="imagelogo">
@@ -25,7 +24,10 @@
         </div>
     </header>
     
-    <a href="/">Accueil</a>
-    <a href="/catalogue">Catalogue</a>
-    
-</nav>
+    <nav>
+      <a href="/">Accueil</a>
+      <a href="/catalogue">Catalogue</a>
+    </nav>
+
+</body>
+</html>

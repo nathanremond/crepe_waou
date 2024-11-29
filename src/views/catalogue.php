@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="panier">
-        <button>Panier</button>
+        <a href="/">Panier</a>
     </div>
 
     <div class="catalogue">
@@ -16,36 +16,42 @@
             <h2>Nom de l'article</h2>
             <p>Infos : </p>
             <p>Prix : €</p>
+            <a href="/detail">Détails</a>
         </div>
         <div class="article">
             <img src="https://picsum.photos/300/200" alt="article">
             <h2>Nom de l'article</h2>
             <p>Infos : </p>
             <p>Prix : €</p>
+            <a href="/detail">Détails</a>
         </div>
         <div class="article">
             <img src="https://picsum.photos/300/200" alt="article">
             <h2>Nom de l'article</h2>
             <p>Infos : </p>
             <p>Prix : €</p>
+            <a href="/detail">Détails</a>
         </div>
         <div class="article">
             <img src="https://picsum.photos/300/200" alt="article">
             <h2>Nom de l'article</h2>
             <p>Infos : </p>
             <p>Prix : €</p>
+            <a href="/detail">Détails</a>
         </div>
         <div class="article">
             <img src="https://picsum.photos/300/200" alt="article">
             <h2>Nom de l'article</h2>
             <p>Infos : </p>
             <p>Prix : €</p>
+            <a href="/detail">Détails</a>
         </div>
         <div class="article">
             <img src="https://picsum.photos/300/200" alt="article">
             <h2>Nom de l'article</h2>
             <p>Infos : </p>
             <p>Prix : €</p>
+            <a href="/detail">Détails</a>
         </div>
       </div>
 </body>

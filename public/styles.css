@@ -1,13 +1,60 @@
-body {
-    font-family: Arial, sans-serif;
+header{
+    background-color: lightgray;
+    display: flex;
+}
+header .logo{
+    display: flex;
+    padding: 1%;
+    width: 90%;
+}
+header .logo .imagelogo img{
+    width: 80%;
+}
+header .logo h1{
+    padding-top: 12%;
+    font-size: 150%;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+header .utilisateur{
+    margin-top: 0.5%;
+}
+header .utilisateur .compteutilisateur{
+    margin-top: 40%;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+nav{
+    display: flex;
+    padding: 1%;
+    width: 15%;
+    justify-content: space-between;
+}
+nav a{
+    font-size: 110%;
+}
+
+footer{
+    margin-top: 5%;
+    padding-top: 1%;
+    background-color: lightgrey;
+    display: flex;
+}
+footer .reseaux{
+    width: 90%;
+    padding-left: 1%;
+}
+footer .reseaux .reseau{
+    display: flex;
+    padding: 1%;
+}
+footer .reseaux .reseau p{
+    margin: 2% 0 0 1%;
+}
+footer .liens{
+    width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1%;
+}
+footer .liens a{
+    width: 100%;
 }

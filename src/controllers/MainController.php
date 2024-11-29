@@ -26,6 +26,12 @@ class MainController
         $this->render('inscription');
     }
 
+    // Page "Détail"
+    public function detail()
+    {
+        $this->render('detail');
+    }
+
     // Page 404
     public function notFound()
     {

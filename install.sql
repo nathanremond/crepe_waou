@@ -1,0 +1,4 @@
+CREATE USER 'nathan'@'localhost' IDENTIFIED BY 'changeme';
+GRANT CREATE, DROP, ALTER, UPDATE, DELETE, SELECT, INSERT, REFERENCES ON *.* TO 'nathan'@'localhost';
+FLUSH PRIVILEGES;
+exit

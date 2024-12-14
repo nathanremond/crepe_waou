@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Product;
+
 class MainController
 {
     // Page d'accueil
@@ -9,9 +11,12 @@ class MainController
     }
 
     // Page "Catalogue"
-    public function catalogue()
+    public function showCatalog()
     {
-        $this->render('catalogue');
+        $product = new Product();
+        $products = $product->findAll();
+        $test[] = $products;
+        $this->render('catalogue', $test);
     }
 
     // Page "Connexion"
@@ -42,11 +47,13 @@ class MainController
     // Méthode pour inclure une vue
     private function render($view, $data = [])
     {
+        echo 'render';
         // Transmet les données aux vues
         extract($data);
 
         // Inclut la vue demandée
         $viewFile = __DIR__ . '/../views/' . $view . '.php';
+        echo $viewFile;
         if (file_exists($viewFile)) {
             require_once __DIR__ . '/../views/partials/header.php';
             require_once $viewFile;

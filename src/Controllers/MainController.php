@@ -15,8 +15,7 @@ class MainController
     {
         $product = new Product();
         $products = $product->findAll();
-        $test[] = $products;
-        $this->render('catalogue', $test);
+        $this->render('catalogue', ['products' => $products]);
     }
 
     // Page "Connexion"
@@ -47,13 +46,12 @@ class MainController
     // Méthode pour inclure une vue
     private function render($view, $data = [])
     {
-        echo 'render';
+        // Inclut la vue demandée
+        $viewFile = __DIR__ . '/../views/' . $view . '.php';
+
         // Transmet les données aux vues
         extract($data);
 
-        // Inclut la vue demandée
-        $viewFile = __DIR__ . '/../views/' . $view . '.php';
-        echo $viewFile;
         if (file_exists($viewFile)) {
             require_once __DIR__ . '/../views/partials/header.php';
             require_once $viewFile;

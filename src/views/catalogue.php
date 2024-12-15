@@ -1,6 +1,3 @@
-<?php
-extract($data);
-?>
 <div class='catalogue'>
 <?php
 foreach ($products as $product) { ?>
@@ -9,7 +6,7 @@ foreach ($products as $product) { ?>
         <h2><?=$product->getName()?></h2>
         <p>Infos : <?=$product->getDescription()?></p>
         <p>Prix : <?=$product->getPrice()?> €</p>
-        <a href="/detail">Détails</a>
+        <a href="/detail/<?=$product->getId()?>">Détails</a>
     </div>
 <?php } ?>
 </div>    

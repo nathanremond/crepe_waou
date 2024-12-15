@@ -11,9 +11,9 @@ $router->setBasePath($basePath);
 // Routes
 $router->map('GET', '/', 'MainController#home');
 $router->map('GET', '/catalogue', 'MainController#showCatalog');
-$router->map('GET', '/connexion', 'MainController#connexion', 'connexion');
-$router->map('GET', '/inscription', 'MainController#inscription', 'inscription');
-$router->map('GET', '/detail', 'MainController#detail', 'detail');
+$router->map('GET', '/connexion', 'MainController#connexion');
+$router->map('GET', '/inscription', 'MainController#inscription');
+$router->map('GET', '/detail/[i:id]', 'MainController#showDetail');
 
 // Retourne l'objet router
 return $router;

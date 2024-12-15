@@ -16,18 +16,11 @@ if ($match) {
     // dump($match); // Voir ce qu'AltoRouter détecte pour la requête
     [$controller, $method] = explode('#', $match['target']);
 
-    echo 'controller='.$controller;
-    echo 'method='.$method;
-    echo 'class_exists='.class_exists($controller);
-    echo 'method_exists='.method_exists($controller, $method);
     if (class_exists($controller) && method_exists($controller, $method)) {
-        echo 'cas ok';
-        (new $controller())->$method();
+        call_user_func_array([new $controller, $method], $match['params']);
     } else {
-        echo 'cas1';
         (new MainController())->notFound();
     }
 } else {
-            echo 'cas2';
     (new MainController())->notFound();
 }

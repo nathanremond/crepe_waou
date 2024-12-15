@@ -31,9 +31,11 @@ class MainController
     }
 
     // Page "Détail"
-    public function detail()
+    public function showDetail($id)
     {
-        $this->render('detail');
+        $repository = new Product();
+        $product = $repository->find($id);
+        $this->render('detail', ['product' => $product]);
     }
 
     // Page 404

@@ -32,6 +32,20 @@ class Product extends CoreModel
     }
 
     /**
+     * Récupère tous les produits (table product) depuis la bdd
+     * Retourne une liste d'objet (instances de la classe Product => le model ou on est)
+     */
+    public function findByCategory($idCategory)
+    {
+        $sql = "SELECT * FROM product WHERE category_id = $idCategory";
+        $pdo = Database::getPDO();
+        $pdoStatement = $pdo->query($sql);
+        $products = $pdoStatement->fetchAll(PDO::FETCH_CLASS, Product::class);
+
+        return $products;
+    }
+
+    /**
      * Récupère un seul produit en fonction de son id
      * Retourne un objet (une instance de la classe Product => le model ou on est)
      */

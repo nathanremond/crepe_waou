@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Product;
+use App\Models\Category;
 
 class MainController
 {
@@ -13,9 +14,23 @@ class MainController
     // Page "Catalogue"
     public function showCatalog()
     {
+        $idCategory = 0;
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $idCategory = $_POST['idCategory'];
+        }
+
         $product = new Product();
-        $products = $product->findAll();
-        $this->render('catalogue', ['products' => $products]);
+        if($idCategory == 0) {
+            $products = $product->findAll();
+        }
+        else {
+            $products = $product->findByCategory($idCategory);
+        }
+
+        $category = new Category();
+        $categories = $category->findAll();
+
+        $this->render('catalogue', ['products' => $products, 'categories' => $categories, 'selectedCategoryId' => $idCategory]);
     }
 
     // Page "Connexion"

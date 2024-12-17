@@ -54,7 +54,7 @@ nav a{
     margin: 2% 0 0 4%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .catalogue .article{
     width: 25%;

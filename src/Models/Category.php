@@ -32,7 +32,7 @@ class Category extends CoreModel
      */
     public function find($id)
     {
-        // Ici on créer la requete SQL qui va récupérer le product en fonction de son id
+        // Ici on créer la requete SQL qui va récupérer la catégorie en fonction de son id
         $sql = "SELECT * FROM category WHERE id = ".$id;
 
         // Ici $pdo est un objet de la classe Databse (Utils/Database.php)
@@ -42,7 +42,7 @@ class Category extends CoreModel
         // ici j'execute ma requete sql ($sql) et je stock le resultat de cette requete dans $pdoStatement
         $pdoStatement = $pdo->query($sql);
 
-        // Je veux récuperer UN objet Product, PDO le fait pour moi => fetchObject (fetch qu'une seule fois + converti en objet de la classe 'Product' donc le model Product)
+        // Je veux récuperer UN objet Category, PDO le fait pour moi => fetchObject (fetch qu'une seule fois + converti en objet de la classe 'Category' donc le model Category)
         $category = $pdoStatement->fetchObject(Category::class);
 
         return $category;

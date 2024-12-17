@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <div class="formconnexion">
+    <div class="form1">
         <form action="" method="">
 
             <h2>Connexion</h2>

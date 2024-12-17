@@ -6,7 +6,7 @@
     <title>Inscription</title>
 </head>
 <body>
-    <div class="forminscription">
+    <div class="form1">
         <form action="" method="">
 
             <h2>Inscription</h2>

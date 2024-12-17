@@ -62,12 +62,10 @@ nav a{
 }
 
 
-.formconnexion{
+.form1{
     display: flex;
     justify-content: center;
     text-align: center;
-}
-form{
     margin-top: 10%;
     display: flex;
     flex-wrap: wrap;
@@ -75,14 +73,14 @@ form{
     border: 2px solid;
     border-radius: 16px;
 }
-form h2{
+.form1 form h2{
     margin-left: 43%;
 }
-form .formchamps{
+.form1 form .formchamps{
     width: 100%;
     padding: 2%;
 }
-form button{
+.form1 form button{
     margin: 2% 0 2% 44%;
     font-size: 110%;
 }

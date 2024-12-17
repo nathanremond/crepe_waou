@@ -2,6 +2,8 @@
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Brand;
+use App\Models\Type;
 
 class MainController
 {
@@ -15,22 +17,38 @@ class MainController
     public function showCatalog()
     {
         $idCategory = 0;
+        $idBrand = 0;
+        $idType = 0;
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $idCategory = $_POST['idCategory'];
+            $idBrand = $_POST['idBrand'];
+            $idType = $_POST['idType'];
         }
 
         $product = new Product();
-        if($idCategory == 0) {
+        if($idCategory == 0 && $idBrand == 0 && $idType == 0) {
             $products = $product->findAll();
         }
         else {
-            $products = $product->findByCategory($idCategory);
+            $products = $product->findBy($idCategory, $idBrand, $idType);
         }
 
         $category = new Category();
         $categories = $category->findAll();
+        $brand = new Brand();
+        $brands = $brand->findAll();
+        $type = new Type();
+        $types = $type->findAll();
 
-        $this->render('catalogue', ['products' => $products, 'categories' => $categories, 'selectedCategoryId' => $idCategory]);
+        $this->render('catalogue', [
+            'products' => $products,
+            'categories' => $categories,
+            'selectedCategoryId' => $idCategory,
+            'brands' => $brands,
+            'selectedBrandId' => $idBrand,
+            'types' => $types,
+            'selectedTypeId' => $idType
+        ]);
     }
 
     // Page "Connexion"

@@ -26,11 +26,11 @@
 <?php
 foreach ($products as $product) { ?>
     <div class="article">
-        <img src="https://picsum.photos/300/200" alt="article">
+        <img src="<?=$product->getPicture()?>" alt="<?=$product->getName()?>" class="photo">
         <h2><?=$product->getName()?></h2>
         <p>Infos : <?=$product->getDescription()?></p>
         <p>Prix : <?=$product->getPrice()?> €</p>
-        <a href="/detail/<?=$product->getId()?>">Détails</a>
+        <a href="detail/<?=$product->getId()?>">Détails</a>
     </div>
 <?php } ?>
 </div>    

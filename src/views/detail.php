@@ -1,6 +1,6 @@
 <div class="catalogue">
     <div class="article">
-        <img src="https://picsum.photos/300/200" alt="article">
+        <img src="<?=$product->getPicture()?>" alt="<?=$product->getName()?>" class="photo">
         <h2><?=$product->getName()?></h2>
         <p>Infos : <?=$product->getDescription()?></p>
         <p>Prix : <?=$product->getPrice()?> €</p>
